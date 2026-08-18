@@ -16,6 +16,9 @@ const __dirname = path.dirname(__filename);
 export default Repack.defineRspackConfig({
   context: __dirname,
   entry: './index.js',
+  output: {
+    uniqueName: 'host',
+  },
   resolve: {
     ...Repack.getResolveOptions(),
   },

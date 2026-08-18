@@ -36,6 +36,11 @@
     "version": "9.2.2",
     "shared": false
   },
+  "@tanstack/react-query": {
+    "name": "@tanstack/react-query",
+    "version": "5.101.4",
+    "shared": false
+  },
   "@module-federation/enhanced": {
     "name": "@module-federation/enhanced",
     "version": "0.13.1",

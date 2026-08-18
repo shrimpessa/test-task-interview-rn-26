@@ -16,6 +16,9 @@ const __dirname = path.dirname(__filename);
 export default Repack.defineRspackConfig({
   context: __dirname,
   entry: './index.js',
+  output: {
+    uniqueName: 'microFront',
+  },
   resolve: {
     ...Repack.getResolveOptions(),
   },
@@ -41,6 +44,8 @@ export default Repack.defineRspackConfig({
       filename: 'microFront.container.js.bundle',
       exposes: {
         './App': './App.tsx',
+        './ClientCardScreen': './src/screens/ClientCardScreen.tsx',
+        './EmployeeProfileScreen': './src/screens/EmployeeProfileScreen.tsx',
       },
       shared: getSharedDependencies({ eager: false }),
     }),
