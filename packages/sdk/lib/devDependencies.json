@@ -84,6 +84,11 @@
     "version": "^8.57.0",
     "devOnly": true
   },
+  "eslint-plugin-unused-imports": {
+    "name": "eslint-plugin-unused-imports",
+    "version": "^3.2.0",
+    "devOnly": true
+  },
   "jest": {
     "name": "jest",
     "version": "^29.6.3",

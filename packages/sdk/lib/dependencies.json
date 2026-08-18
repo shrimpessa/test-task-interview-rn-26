@@ -1,7 +1,7 @@
 {
   "react": {
     "name": "react",
-    "version": "19.1.1"
+    "version": "19.1.0"
   },
   "react-native": {
     "name": "react-native",
@@ -13,23 +13,28 @@
   },
   "@react-navigation/native": {
     "name": "@react-navigation/native",
-    "version": "7.3.16"
+    "version": "7.3.16",
+    "shared": false
   },
   "@react-navigation/native-stack": {
     "name": "@react-navigation/native-stack",
-    "version": "7.6.3"
+    "version": "7.6.3",
+    "shared": false
   },
   "react-native-screens": {
     "name": "react-native-screens",
-    "version": "4.17.1"
+    "version": "4.17.1",
+    "shared": false
   },
   "mobx": {
     "name": "mobx",
-    "version": "6.13.7"
+    "version": "6.13.7",
+    "shared": false
   },
   "mobx-react": {
     "name": "mobx-react",
-    "version": "9.2.2"
+    "version": "9.2.2",
+    "shared": false
   },
   "@module-federation/enhanced": {
     "name": "@module-federation/enhanced",
