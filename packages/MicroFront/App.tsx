@@ -1,46 +1,37 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ClientCardScreen } from './src/screens/ClientCardScreen';
+import { EmployeeProfileScreen } from './src/screens/EmployeeProfileScreen';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+type TStandaloneParamList = {
+  ClientCard: undefined;
+  EmployeeProfile: { employeeId?: string } | undefined;
+};
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+const Stack = createNativeStackNavigator<TStandaloneParamList>();
 
-  return <Text style={{ color: 'red' }}>hello world</Text>;
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
+export const App = () => {
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="ClientCard"
+          screenOptions={{ headerBackButtonDisplayMode: 'minimal' }}
+        >
+          <Stack.Screen
+            name="ClientCard"
+            component={ClientCardScreen}
+            options={{ title: 'Клиент' }}
+          />
+          <Stack.Screen
+            name="EmployeeProfile"
+            component={EmployeeProfileScreen}
+            options={{ title: 'Профиль сотрудника' }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+};
