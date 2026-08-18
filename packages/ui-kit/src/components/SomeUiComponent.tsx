@@ -4,7 +4,7 @@ import React from 'react'
 const SomeUiComponent = () => {
   return (
     <View>
-      <Text>SomeUiComponent</Text>
+      <Text>SomeUiComponent indeed</Text>
     </View>
   )
 }
